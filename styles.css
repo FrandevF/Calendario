@@ -1,0 +1,635 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #737272;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    justify-content: stretch;
+    margin: 0 2rem;
+
+}
+
+.nav-links li {
+    padding: 12px 10px;
+
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #76ee94;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #242e3e;
+
+}
+
+.logo {
+    margin: 10px 1.6rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #e8c39e;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.byFran {
+    color: #c9ad8a;
+    font-weight: 700;
+    position: relative;
+    margin-left: 25px;
+    font-size: small;
+    text-transform: none;
+}
+
+.grid-container {
+    position: relative;
+    display: grid;
+    margin: 35px;
+    grid-template-columns: 50px 70px repeat(5, 1fr);
+    grid-template-rows: 45px 30px repeat(7, 50px) 45px 30px repeat(7, 50px);
+    gap: 5px;
+    grid-template-areas:
+        "turn turn turn turn turn turn turn"
+        "hour horarioPrim lunes martes miercoles jueves viernes"
+        "hourNum1 hor1 tcyg1 . . est4 ."
+        "hourNum2 hor2 tcyg2 . . est5 ."
+        "hourNum3 hor3 lengua1 . . mat1 ."
+        "hourNum4 hor4 lengua2 . . mat2 ."
+        "hourNum5 hor5 est1 . . mat3 ."
+        "hourNum6 hor6 est2 . . mat4 ."
+        "hourNum7 hor7 est3 . . . ."
+
+        "turn2 turn2 turn2 turn2 turn2 turn2 turn2"
+        "hour2 horarioSeg lunesSeg martesSeg miercolesSeg juevesSeg viernesSeg"
+        "hourNum8 hor8 tdm1 ida4 pdf3 sra1 ."
+        "hourNum9 hor9 tdm2 ida5 pdf4 sra2 ."
+        "hourNum10 hor10 pdf1 ida6 pdf5 sra3 rhcl1"
+        "hourNum11 hor11 pdf2 ing1 mate1 inst1 rhcl2"
+        "hourNum12 hor12 ida1 ing2 mate2 inst2 tdm4"
+        "hourNum13 hor13 ida2 ing3 srd1 inst3 tdm3"
+        "hourNum14 hor14 ida3 . srd2 inst4 ."
+    ;
+
+}
+
+.rhcl1 {
+    grid-area: rhcl1;
+}
+
+.rhcl2 {
+    grid-area: rhcl2;
+}
+
+.inst1 {
+    grid-area: inst1;
+}
+
+.inst2 {
+    grid-area: inst2;
+}
+
+.inst3 {
+    grid-area: inst3;
+}
+
+.inst4 {
+    grid-area: inst4;
+}
+
+.sra1 {
+    grid-area: sra1;
+}
+
+.sra2 {
+    grid-area: sra2;
+}
+
+.sra3 {
+    grid-area: sra3;
+}
+
+.srd1 {
+    grid-area: srd1;
+}
+
+.srd2 {
+    grid-area: srd2;
+}
+
+.mate1 {
+    grid-area: mate1;
+}
+
+.mate2 {
+    grid-area: mate2;
+}
+
+.ing1 {
+    grid-area: ing1;
+}
+
+.ing2 {
+    grid-area: ing2;
+}
+
+.ing3 {
+    grid-area: ing3;
+}
+
+.ida1 {
+    grid-area: ida1;
+}
+
+.ida2 {
+    grid-area: ida2;
+}
+
+.ida3 {
+    grid-area: ida3;
+}
+
+.ida4 {
+    grid-area: ida4;
+}
+
+.ida5 {
+    grid-area: ida5;
+}
+
+.ida6 {
+    grid-area: ida6;
+}
+
+.pdf1 {
+    grid-area: pdf1;
+}
+
+.pdf2 {
+    grid-area: pdf2;
+}
+
+.pdf3 {
+    grid-area: pdf3;
+}
+
+.pdf4 {
+    grid-area: pdf4;
+}
+
+.pdf5 {
+    grid-area: pdf5;
+}
+
+.tdm1 {
+    grid-area: tdm1;
+}
+
+.tdm2 {
+    grid-area: tdm2;
+}
+
+.tdm3 {
+    grid-area: tdm3;
+}
+
+.tdm4 {
+    grid-area: tdm4;
+}
+
+/* MATERIAS MAñANA DIOS */
+.tcyg1 {
+    grid-area: tcyg1;
+}
+
+.tcyg2 {
+    grid-area: tcyg2;
+}
+
+.lengua1 {
+    grid-area: lengua1;
+}
+
+.lengua2 {
+    grid-area: lengua2;
+}
+
+.est1 {
+    grid-area: est1;
+}
+
+.est2 {
+    grid-area: est2;
+}
+
+.est3 {
+    grid-area: est3;
+}
+
+.est4 {
+    grid-area: est4;
+}
+
+.est5 {
+    grid-area: est5;
+}
+
+.mat1 {
+    grid-area: mat1;
+}
+
+.mat2 {
+    grid-area: mat2;
+}
+
+.mat3 {
+    grid-area: mat3;
+}
+
+.mat4 {
+    grid-area: mat4;
+}
+
+
+/* Horario text */
+.horario1 {
+    grid-area: hor1;
+}
+
+.horario2 {
+    grid-area: hor2;
+}
+
+.horario3 {
+    grid-area: hor3;
+}
+
+.horario4 {
+    grid-area: hor4;
+}
+
+.horario5 {
+    grid-area: hor5;
+}
+
+.horario6 {
+    grid-area: hor6;
+}
+
+.horario7 {
+    grid-area: hor7;
+}
+
+.horario8 {
+    grid-area: hor8;
+}
+
+.horario9 {
+    grid-area: hor9;
+}
+
+.horario10 {
+    grid-area: hor10;
+}
+
+.horario11 {
+    grid-area: hor11;
+}
+
+.horario12 {
+    grid-area: hor12;
+}
+
+.horario13 {
+    grid-area: hor13;
+}
+
+.horario14 {
+    grid-area: hor14;
+}
+
+/* Num Horario Text */
+.hourNum1 {
+    grid-area: hourNum1;
+}
+
+.hourNum2 {
+    grid-area: hourNum2;
+}
+
+.hourNum3 {
+    grid-area: hourNum3;
+}
+
+.hourNum4 {
+    grid-area: hourNum4;
+}
+
+.hourNum5 {
+    grid-area: hourNum5;
+}
+
+.hourNum6 {
+    grid-area: hourNum6;
+}
+
+.hourNum7 {
+    grid-area: hourNum7;
+}
+
+.hourNum8 {
+    grid-area: hourNum8;
+}
+
+.hourNum9 {
+    grid-area: hourNum9;
+}
+
+.hourNum10 {
+    grid-area: hourNum10;
+}
+
+.hourNum11 {
+    grid-area: hourNum11;
+}
+
+.hourNum12 {
+    grid-area: hourNum12;
+}
+
+.hourNum13 {
+    grid-area: hourNum13;
+}
+
+.hourNum14 {
+    grid-area: hourNum14;
+}
+
+.days-container {
+    position: relative;
+}
+
+
+.turnoMañana,
+.turnoTarde {
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    background-color: #f5e1c8;
+    border-radius: 2px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.turnoMañana {
+    grid-area: turn;
+}
+
+.turnoTarde {
+    grid-area: turn2;
+}
+
+.day {
+    position: relative;
+    background-color: #f5e1c8;
+    border: 1px solid #88827a;
+    border-radius: 2.3px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #242e3e;
+    transition: all .5s ease;
+    z-index: 99;
+    text-align: center;
+    align-content: center;
+}
+
+.dayD {
+    position: relative;
+    background-color: #f5e1c8;
+    border: 1px solid #88827a;
+    border-radius: 2.3px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #242e3e;
+}
+
+.day:hover {
+    cursor: grab;
+    transform: scale(1.15);
+    z-index: 100;
+    background-color: #c0bdb9;
+}
+
+.day__1 {
+    grid-area: lunes;
+}
+
+.day__2 {
+    grid-area: martes;
+}
+
+.day__3 {
+    grid-area: miercoles;
+}
+
+.day__4 {
+    grid-area: jueves;
+}
+
+.day__5 {
+    grid-area: viernes;
+}
+
+.horario__a {
+    grid-area: horarioPrim;
+}
+
+.horario__b {
+    grid-area: horarioSeg;
+}
+
+
+
+.hora {
+    grid-area: hour;
+    border-radius: 2.3px;
+}
+
+.horaSec {
+    grid-area: hour2;
+    border-radius: 2.3px;
+}
+
+
+
+.day__1-2 {
+    grid-area: lunesSeg;
+}
+
+.day__2-2 {
+    grid-area: martesSeg;
+}
+
+.day__3-2 {
+    grid-area: miercolesSeg;
+}
+
+.day__4-2 {
+    grid-area: juevesSeg;
+}
+
+.day__5-2 {
+    grid-area: viernesSeg;
+}
+
+.void-space {
+    background-color: #bdb0a0;
+    border: 1px solid #706960;
+}
+
+#modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    visibility: hidden;
+
+}
+
+.subjectsModal {
+    width: 40%;
+    height: 60%;
+    background-color: #76ee94;
+    border: #242e3e 1.8px solid;
+    border-radius: 9px;
+
+}
+
+.closeModal:hover {
+    cursor: pointer;
+}
+
+.rowClose-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 10px;
+}
+
+#addTasks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+#addTasks h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #162339;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-bottom: 1rem;
+}
+
+#addTasks input {
+    width: 80%;
+    height: 2rem;
+    border: 1px solid #162339;
+    border-radius: 2px;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #162339;
+    text-transform: none;
+    letter-spacing: 1px;
+    background-color: #c8cfdd;
+}
+
+.formTask {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    margin: 0 auto;
+}
+
+#addTasks button {
+    width: 80%;
+    height: 2rem;
+    border: 1px solid #162339;
+    border-radius: 2px;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #edf0f3;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    background-color: #b61757;
+    transition: all 0.3s ease;
+}
+
+.important,
+.NotImportant {
+    width: 80%;
+    height: 1.7rem;
+    border: 1px solid #162339;
+    border-radius: 2px;
+    font-size: .85rem;
+    font-weight: 500;
+    color: #FFF;
+
+    letter-spacing: 2px;
+    background-color: #162339;
+    transition: all 0.3s ease;
+    margin-bottom: 6px;
+    position: relative;
+    justify-content: center;
+
+    text-align: center;
+    align-content: center;
+
+}
+
+.important:hover {
+    background-color: crimson;
+}
+
+.NotImportant:hover {
+    background-color: rgb(116, 106, 106);
+}
