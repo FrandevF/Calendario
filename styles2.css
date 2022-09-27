@@ -1,0 +1,329 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #737272;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    justify-content: stretch;
+    margin: 0 2rem;
+
+}
+
+.nav-links li {
+    padding: 12px 10px;
+
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #76ee94;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #242e3e;
+
+}
+
+.logo {
+    margin: 10px 1.6rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #e8c39e;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.byFran {
+    color: #c9ad8a;
+    font-weight: 700;
+    position: relative;
+    margin-left: 25px;
+    font-size: small;
+    text-transform: none;
+}
+
+.grid-container {
+    position: relative;
+    display: grid;
+    margin: 35px;
+    grid-template-columns: 50px 70px repeat(5, 1fr);
+    grid-template-rows: 45px 30px repeat(7, 50px) 45px 30px repeat(7, 50px);
+    gap: 5px;
+    grid-template-areas:
+        "turn turn turn turn turn turn turn"
+        "hour horarioPrim lunes martes miercoles jueves viernes"
+        "hourNum1 hor1 tcyg1 . . est4 ."
+        "hourNum2 hor2 tcyg2 . . est5 ."
+        "hourNum3 hor3 lengua1 . . mat1 ."
+        "hourNum4 hor4 lengua2 . . mat2 ."
+        "hourNum5 hor5 est1 . . mat3 ."
+        "hourNum6 hor6 est2 . . mat4 ."
+        "hourNum7 hor7 est3 . . . ."
+
+        "turn2 turn2 turn2 turn2 turn2 turn2 turn2"
+        "hour2 horarioSeg lunesSeg martesSeg miercolesSeg juevesSeg viernesSeg"
+        "hourNum8 hor8 tdm1 ida4 pdf3 sra1 ."
+        "hourNum9 hor9 tdm2 ida5 pdf4 sra2 ."
+        "hourNum10 hor10 pdf1 ida6 pdf5 sra3 rhcl1"
+        "hourNum11 hor11 pdf2 ing1 mate1 inst1 rhcl2"
+        "hourNum12 hor12 ida1 ing2 mate2 inst2 tdm4"
+        "hourNum13 hor13 ida2 ing3 srd1 inst3 tdm3"
+        "hourNum14 hor14 ida3 . srd2 inst4 ."
+    ;
+
+}
+
+.horario1 {
+    grid-area: hor1;
+}
+
+.horario2 {
+    grid-area: hor2;
+}
+
+.horario3 {
+    grid-area: hor3;
+}
+
+.horario4 {
+    grid-area: hor4;
+}
+
+.horario5 {
+    grid-area: hor5;
+}
+
+.horario6 {
+    grid-area: hor6;
+}
+
+.horario7 {
+    grid-area: hor7;
+}
+
+.horario8 {
+    grid-area: hor8;
+}
+
+.horario9 {
+    grid-area: hor9;
+}
+
+.horario10 {
+    grid-area: hor10;
+}
+
+.horario11 {
+    grid-area: hor11;
+}
+
+.horario12 {
+    grid-area: hor12;
+}
+
+.horario13 {
+    grid-area: hor13;
+}
+
+.horario14 {
+    grid-area: hor14;
+}
+
+/* Num Horario Text */
+.hourNum1 {
+    grid-area: hourNum1;
+}
+
+.hourNum2 {
+    grid-area: hourNum2;
+}
+
+.hourNum3 {
+    grid-area: hourNum3;
+}
+
+.hourNum4 {
+    grid-area: hourNum4;
+}
+
+.hourNum5 {
+    grid-area: hourNum5;
+}
+
+.hourNum6 {
+    grid-area: hourNum6;
+}
+
+.hourNum7 {
+    grid-area: hourNum7;
+}
+
+.hourNum8 {
+    grid-area: hourNum8;
+}
+
+.hourNum9 {
+    grid-area: hourNum9;
+}
+
+.hourNum10 {
+    grid-area: hourNum10;
+}
+
+.hourNum11 {
+    grid-area: hourNum11;
+}
+
+.hourNum12 {
+    grid-area: hourNum12;
+}
+
+.hourNum13 {
+    grid-area: hourNum13;
+}
+
+.hourNum14 {
+    grid-area: hourNum14;
+}
+
+.days-container {
+    position: relative;
+}
+
+
+.turnoMañana,
+.turnoTarde {
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    background-color: #f5e1c8;
+    border-radius: 2px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.turnoMañana {
+    grid-area: turn;
+}
+
+.turnoTarde {
+    grid-area: turn2;
+}
+
+.day {
+    position: relative;
+    background-color: #f5e1c8;
+    border: 1px solid #88827a;
+    border-radius: 2.3px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #242e3e;
+    transition: all .5s ease;
+    z-index: 99;
+    text-align: center;
+    align-content: center;
+}
+
+.dayD {
+    position: relative;
+    background-color: #f5e1c8;
+    border: 1px solid #88827a;
+    border-radius: 2.3px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #242e3e;
+}
+
+.day:hover {
+    cursor: grab;
+    transform: scale(1.15);
+    z-index: 100;
+    background-color: #c0bdb9;
+}
+
+.day__1 {
+    grid-area: lunes;
+}
+
+.day__2 {
+    grid-area: martes;
+}
+
+.day__3 {
+    grid-area: miercoles;
+}
+
+.day__4 {
+    grid-area: jueves;
+}
+
+.day__5 {
+    grid-area: viernes;
+}
+
+.horario__a {
+    grid-area: horarioPrim;
+}
+
+.horario__b {
+    grid-area: horarioSeg;
+}
+
+
+
+.hora {
+    grid-area: hour;
+    border-radius: 2.3px;
+}
+
+.horaSec {
+    grid-area: hour2;
+    border-radius: 2.3px;
+}
+
+
+
+.day__1-2 {
+    grid-area: lunesSeg;
+}
+
+.day__2-2 {
+    grid-area: martesSeg;
+}
+
+.day__3-2 {
+    grid-area: miercolesSeg;
+}
+
+.day__4-2 {
+    grid-area: juevesSeg;
+}
+
+.day__5-2 {
+    grid-area: viernesSeg;
+}

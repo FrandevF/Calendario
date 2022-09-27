@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="tests.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <nav>
+        <div class="logo">
+          <h4>Horarios <span class="byFran">By Fran</span></h4>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#">Schedule</a></li>
+          <li><a href="#">Tasks List</a></li>
+        </ul>
+      </nav>
+      <div class="premodal-container">
+        <div class="ocultBeforeModal">
+          <h2 class="h2preModal">Creá tu propio calendario.</h2>
+          <button class="modalBtn">Ir a crear!</button>
+        </div>
+      </div>
+      <div id="modal" class="hidden">
+        <div class="grid-container">
+          <div class="turnoMañana"><p>Turno mañana</p></div>
+
+          <div class="dayD day__1">Lunes</div>
+          <div class="dayD day__2">Martes</div>
+          <div class="dayD day__3">Miercoles</div>
+          <div class="dayD day__4">Jueves</div>
+          <div class="dayD day__5">Viernes</div>
+          <div class="hora dayD">Hora</div>
+          <div class="dayD horario__a">Horario</div>
+          <div class="turnoTarde"><p>Turno Tarde</p></div>
+          <div class="dayD day__1-2">Lunes</div>
+          <div class="dayD day__2-2">Martes</div>
+          <div class="dayD day__3-2">Miercoles</div>
+          <div class="dayD day__4-2">Jueves</div>
+          <div class="dayD day__5-2">Viernes</div>
+
+          <div class="dayD horaSec">Hora</div>
+          <div class="dayD horario__b">Horario</div>
+          <div class="dayD horario1">-- --</div>
+          <div class="dayD horario2">-- --</div>
+          <div class="dayD horario3">-- --</div>
+          <div class="dayD horario4">-- --</div>
+          <div class="dayD horario5">-- --</div>
+          <div class="dayD horario6">-- --</div>
+          <div class="dayD horario7">-- --</div>
+          <div class="dayD horario8">-- --</div>
+          <div class="dayD horario9">-- --</div>
+          <div class="dayD horario10">-- --</div>
+          <div class="dayD horario11">-- --</div>
+          <div class="dayD horario12">-- --</div>
+          <div class="dayD horario13">-- --</div>
+          <div class="dayD horario14">-- --</div>
+          <div class="dayD hourNum1">1</div>
+          <div class="dayD hourNum2">2</div>
+          <div class="dayD hourNum3">3</div>
+          <div class="dayD hourNum4">4</div>
+          <div class="dayD hourNum5">5</div>
+          <div class="dayD hourNum6">6</div>
+          <div class="dayD hourNum7">7</div>
+          <div class="dayD hourNum8">8</div>
+          <div class="dayD hourNum9">9</div>
+          <div class="dayD hourNum10">10</div>
+          <div class="dayD hourNum11">11</div>
+          <div class="dayD hourNum12">12</div>
+          <div class="dayD hourNum13">13</div>
+          <div class="dayD hourNum14">14</div>
+          <form class="form"></form>
+        </div>
+      </div>
+
+      <!-- Mostrar calendario creado -->
+
+      <div id="showCalendar" class="hidden">
+        <h2 class="yourCalendar">--Tu calendario--</h2>
+        <div class="grid-container2">
+          <form class="form2"></form>
+          <div class="turnoMañana"><p>Turno mañana</p></div>
+
+          <div class="dayD day__1">Lunes</div>
+          <div class="dayD day__2">Martes</div>
+          <div class="dayD day__3">Miercoles</div>
+          <div class="dayD day__4">Jueves</div>
+          <div class="dayD day__5">Viernes</div>
+          <div class="hora dayD">Hora</div>
+          <div class="dayD horario__a">Horario</div>
+          <div class="turnoTarde"><p>Turno Tarde</p></div>
+          <div class="dayD day__1-2">Lunes</div>
+          <div class="dayD day__2-2">Martes</div>
+          <div class="dayD day__3-2">Miercoles</div>
+          <div class="dayD day__4-2">Jueves</div>
+          <div class="dayD day__5-2">Viernes</div>
+
+          <div class="dayD horaSec">Hora</div>
+          <div class="dayD horario__b">Horario</div>
+          <div class="dayD horario1">-- --</div>
+          <div class="dayD horario2">-- --</div>
+          <div class="dayD horario3">-- --</div>
+          <div class="dayD horario4">-- --</div>
+          <div class="dayD horario5">-- --</div>
+          <div class="dayD horario6">-- --</div>
+          <div class="dayD horario7">-- --</div>
+          <div class="dayD horario8">-- --</div>
+          <div class="dayD horario9">-- --</div>
+          <div class="dayD horario10">-- --</div>
+          <div class="dayD horario11">-- --</div>
+          <div class="dayD horario12">-- --</div>
+          <div class="dayD horario13">-- --</div>
+          <div class="dayD horario14">-- --</div>
+          <div class="dayD hourNum1">1</div>
+          <div class="dayD hourNum2">2</div>
+          <div class="dayD hourNum3">3</div>
+          <div class="dayD hourNum4">4</div>
+          <div class="dayD hourNum5">5</div>
+          <div class="dayD hourNum6">6</div>
+          <div class="dayD hourNum7">7</div>
+          <div class="dayD hourNum8">8</div>
+          <div class="dayD hourNum9">9</div>
+          <div class="dayD hourNum10">10</div>
+          <div class="dayD hourNum11">11</div>
+          <div class="dayD hourNum12">12</div>
+          <div class="dayD hourNum13">13</div>
+          <div class="dayD hourNum14">14</div>
+        </div>
+      </div>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum et
+        blanditiis saepe tempora exercitationem repudiandae, tempore, ea, libero
+        tenetur est perspiciatis animi corporis sequi in? Tempore repellendus
+        blanditiis amet distinctio?
+      </p>
+    </div>
+    <script src="tests.js"></script>
+  </body>
+</html>

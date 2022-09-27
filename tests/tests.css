@@ -1,0 +1,480 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #1a1a40;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    overflow-x: hidden;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    justify-content: stretch;
+    margin: 0 2rem;
+
+}
+
+.nav-links li {
+    padding: 35px 10px;
+
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #76ee94;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.6s ease;
+
+}
+
+.nav-links li a:hover {
+    color: #ee76b8;
+
+}
+
+.logo {
+    margin: 10px 1.6rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #e8c39e;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.byFran {
+    color: #c9ad8a;
+    font-weight: 700;
+    position: relative;
+    margin-left: 25px;
+    font-size: small;
+    text-transform: none;
+}
+
+.grid-container,
+.grid-container2 {
+    position: relative;
+    display: grid;
+    margin: 0 auto;
+    width: 95%;
+    grid-template-columns: 50px 70px repeat(5, 1fr);
+    grid-template-rows: 45px 30px repeat(7, 50px) 45px 30px repeat(7, 50px);
+    gap: 5px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "turn turn turn turn turn turn turn"
+        "hour horarioPrim lunes martes miercoles jueves viernes"
+        "hourNum1 hor1 . . . . ."
+        "hourNum2 hor2 . . . . ."
+        "hourNum3 hor3 . . . . ."
+        "hourNum4 hor4 . . . . ."
+        "hourNum5 hor5 . . . . ."
+        "hourNum6 hor6 . . . . ."
+        "hourNum7 hor7 . . . . ."
+
+        "turn2 turn2 turn2 turn2 turn2 turn2 turn2"
+        "hour2 horarioSeg lunesSeg martesSeg miercolesSeg juevesSeg viernesSeg"
+        "hourNum8 hor8 . . . . ."
+        "hourNum9 hor9 . . . . ."
+        "hourNum10 hor10 . . . . ."
+        "hourNum11 hor11 . . . . ."
+        "hourNum12 hor12 . . . . ."
+        "hourNum13 hor13 . . . . ."
+        "hourNum14 hor14 . . . . ."
+    ;
+
+}
+
+
+
+.horario1 {
+    grid-area: hor1;
+}
+
+.horario2 {
+    grid-area: hor2;
+}
+
+.horario3 {
+    grid-area: hor3;
+}
+
+.horario4 {
+    grid-area: hor4;
+}
+
+.horario5 {
+    grid-area: hor5;
+}
+
+.horario6 {
+    grid-area: hor6;
+}
+
+.horario7 {
+    grid-area: hor7;
+}
+
+.horario8 {
+    grid-area: hor8;
+}
+
+.horario9 {
+    grid-area: hor9;
+}
+
+.horario10 {
+    grid-area: hor10;
+}
+
+.horario11 {
+    grid-area: hor11;
+}
+
+.horario12 {
+    grid-area: hor12;
+}
+
+.horario13 {
+    grid-area: hor13;
+}
+
+.horario14 {
+    grid-area: hor14;
+}
+
+/* Num Horario Text */
+.hourNum1 {
+    grid-area: hourNum1;
+}
+
+.hourNum2 {
+    grid-area: hourNum2;
+}
+
+.hourNum3 {
+    grid-area: hourNum3;
+}
+
+.hourNum4 {
+    grid-area: hourNum4;
+}
+
+.hourNum5 {
+    grid-area: hourNum5;
+}
+
+.hourNum6 {
+    grid-area: hourNum6;
+}
+
+.hourNum7 {
+    grid-area: hourNum7;
+}
+
+.hourNum8 {
+    grid-area: hourNum8;
+}
+
+.hourNum9 {
+    grid-area: hourNum9;
+}
+
+.hourNum10 {
+    grid-area: hourNum10;
+}
+
+.hourNum11 {
+    grid-area: hourNum11;
+}
+
+.hourNum12 {
+    grid-area: hourNum12;
+}
+
+.hourNum13 {
+    grid-area: hourNum13;
+}
+
+.hourNum14 {
+    grid-area: hourNum14;
+}
+
+.days-container {
+    position: relative;
+}
+
+
+
+
+.turnoMañana {
+    grid-area: turn;
+}
+
+.turnoTarde {
+    grid-area: turn2;
+}
+
+
+
+
+
+.day__1 {
+    grid-area: lunes;
+}
+
+.day__2 {
+    grid-area: martes;
+}
+
+.day__3 {
+    grid-area: miercoles;
+}
+
+.day__4 {
+    grid-area: jueves;
+}
+
+.day__5 {
+    grid-area: viernes;
+}
+
+.horario__a {
+    grid-area: horarioPrim;
+}
+
+.horario__b {
+    grid-area: horarioSeg;
+}
+
+
+
+.hora {
+    grid-area: hour;
+    border-radius: 2.3px;
+}
+
+.horaSec {
+    grid-area: hour2;
+    border-radius: 2.3px;
+}
+
+
+
+.day__1-2 {
+    grid-area: lunesSeg;
+}
+
+.day__2-2 {
+    grid-area: martesSeg;
+}
+
+.day__3-2 {
+    grid-area: miercolesSeg;
+}
+
+.day__4-2 {
+    grid-area: juevesSeg;
+}
+
+.day__5-2 {
+    grid-area: viernesSeg;
+}
+
+
+
+
+
+
+
+
+.day {
+    position: relative;
+    background-color: #701730;
+    border: 1.5px solid #403d3d;
+    border-radius: 2.6px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #0f1218;
+    transition: all .5s ease;
+    z-index: 99;
+    text-align: center;
+    align-content: center;
+
+    gap: 2px;
+}
+
+.dayD {
+    position: relative;
+    background-color: #434141;
+    border: dashed 1.8px #928f8c;
+
+    border-radius: 2.3px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: #CCC;
+}
+
+.turnoMañana,
+.turnoTarde {
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    background-color: #073f59;
+    color: #CCC;
+    border-radius: 2px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 900;
+    transition: all 0.3s ease;
+    border: 2.4px dashed #678eb0;
+}
+
+.day:hover {
+    cursor: grab;
+    transform: scale(1.15);
+    z-index: 100;
+    background-color: #993753;
+    border: 1.5px dashed #CCC;
+}
+
+button {
+    background-color: #d28f3d;
+    border: 1px solid #88827a;
+    border-radius: 2.3px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #242e3e;
+    transition: all .5s ease;
+    z-index: 99;
+    text-align: center;
+    align-content: center;
+    width: 150px;
+    height: 80px;
+    position: relative;
+    top: 50%;
+}
+
+
+.hidden {
+    visibility: hidden;
+}
+
+
+.ocultBeforeModal {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
+    justify-items: center;
+}
+
+.h2preModal {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #92969d;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+
+.modalBtn {
+    background-color: #d28f3d;
+    border: 3px solid #483d2e;
+    border-radius: 3px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #242e3e;
+    width: 150px;
+    height: 60px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.ocult {
+    display: none;
+}
+
+.form {
+    position: relative;
+}
+
+.form2 {
+    position: absolute;
+}
+
+#addYourSubject {
+    color: #eaebeb;
+}
+
+form {
+    position: relative;
+    justify-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    bottom: 18;
+
+    margin-left: 500px;
+}
+
+button {
+    margin: -10px 15px;
+    cursor: pointer;
+}
+
+.already {
+    display: none;
+}
+
+#showCalendar {
+    position: relative;
+    width: 100%;
+}
+
+.yourCalendar {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    border-radius: 2.6px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 3.4rem;
+    color: #c11545;
+    transition: all 1.7s ease;
+    z-index: 99;
+    letter-spacing: 3.3px;
+    text-align: center;
+    align-content: center;
+    gap: 2px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

@@ -1,40 +1,40 @@
-// const formUI = document.querySelector("#form");
-// const activityListUI = document.querySelector("#activityList");
-// let arrayActivities = [];
+const formUI = document.querySelector("#form");
+const activityListUI = document.querySelector("#activityList");
+let arrayActivities = [];
 
-// //CREATE ITEM
-// const createItem = (activity) => {
-//   let item = {
-//     activity: activity,
-//     status: false,
-//   };
-//   arrayActivities.push(item);
-//   return item;
-// };
+//CREATE ITEM
+const createItem = (activity) => {
+  let item = {
+    activity: activity,
+    status: false,
+  };
+  arrayActivities.push(item);
+  return item;
+};
 
-// let run = createItem("run");
-// let eat = createItem("eat");
-// console.log(run);
-// console.log(arrayActivities);
+let run = createItem("run");
+let eat = createItem("eat");
+console.log(run);
+console.log(arrayActivities);
 
-// //SAVE ITEM
+//SAVE ITEM
 
-// const saveDB = () => {
-//   localStorage.setItem("activities", JSON.stringify(arrayActivities));
-// };
+const saveDB = () => {
+  localStorage.setItem("activities", JSON.stringify(arrayActivities));
+};
 
-// //REMOVE ITEM
+//REMOVE ITEM
 
-// //Button submit detection
+//Button submit detection
 
-// formUI.addEventListener("submit", (e) => {
-//   e.preventDefault();
-//   let activityUI = document.querySelector("#activity").value;
+formUI.addEventListener("submit", (e) => {
+  e.preventDefault();
+  let activityUI = document.querySelector("#activity").value;
 
-//   createItem(activityUI);
-//   saveDB();
-//   formUI.reset(); //reset formInput
-// });
+  createItem(activityUI);
+  saveDB();
+  formUI.reset(); //reset formInput
+});
 
 //MODAL
 const materias = document.querySelectorAll(".day");
