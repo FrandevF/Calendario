@@ -478,3 +478,7 @@ button {
     gap: 2px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+.voidday {
+    background-color: #3b1721;
+}

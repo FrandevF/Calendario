@@ -22,6 +22,7 @@ function makeInputsToGrid() {
     form.appendChild(input);
     gridContainer.appendChild(input);
   }
+
   const button1 = document.createElement("button");
   button1.textContent = "Add";
   button1.classList.add("btn-oculto");
@@ -57,20 +58,37 @@ form.addEventListener("submit", (e) => {
     }
   });
 });
+//hacer que si ya se guardó el calendario, al cargar la página se muestre el calendario guardado---ARREGLAR
+const ocult = document.querySelector(".ocultBeforeModal");
+
+document.addEventListener("DOMContentLoaded", function () {
+  if (calendarSaved === true) {
+    ocult.classList.add("ocult");
+    alert("Calendar saved");
+  }
+});
 
 //OCULTAR "CREA TU PROPIO CALENDARIO"
+
 const saveCalendarButton = document.getElementById("saveCalendar");
 saveCalendarButton.addEventListener("click", (e) => {
   e.preventDefault();
   const modal = document.getElementById("modal");
   modal.classList.add("hidden");
-  const ocult = document.querySelector(".ocultBeforeModal");
+
   // ocult.classList.remove("ocult");
   showCalendar();
 });
+let calendarSaved = false;
+
+//configs
 
 // Mostrar calendario creado
 function showCalendar() {
+  calendarSaved = true;
+  const saveArr = [];
+  saveArr.push(JSON.stringify(calendarSaved));
+  addObject(saveArr);
   const gridContainer2 = document.querySelector(".grid-container2");
   const showCalendar = document.getElementById("showCalendar");
   showCalendar.classList.remove("hidden");
@@ -94,13 +112,28 @@ function showCalendar() {
   }
 
   gridContainer2.appendChild(form);
+
   consult().then((data) => {
     const inputSubjectsSaved = document.querySelectorAll(".inputSubjectsSaved");
-    inputSubjectsSaved.forEach((item, index) => {
-      item.setAttribute("value", data[index].materia);
+    const input = document.querySelectorAll(".inputSubjects");
+
+    input.forEach((item, index) => {
+      if (item.value !== "") {
+        inputSubjectsSaved[index].setAttribute("value", item.value);
+      }
+      if (item.value === "") {
+        inputSubjectsSaved[index].setAttribute("value", "");
+        inputSubjectsSaved[index].classList.add("voidday");
+      }
     });
+    calendarSaved = true;
   });
 }
+
+// const arr = JSON.stringify(data);
+// const arr2 = JSON.parse(arr);
+// console.log(arr);
+// console.log(arr2);
 
 // CRUD
 const IDBRequest = indexedDB.open("CalendarDB", 1);
